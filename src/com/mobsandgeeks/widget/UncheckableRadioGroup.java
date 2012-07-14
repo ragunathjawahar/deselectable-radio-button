@@ -352,7 +352,7 @@ public class UncheckableRadioGroup extends RadioGroup {
                     child.setId(id);
                 }
                 
-                setOnWidgetCheckedChangeListener(((UncheckableRadioButton) child), 
+                setOnCheckedChangeWidgetListener(((UncheckableRadioButton) child), 
                         mChildOnCheckedChangeListener);
             }
 
@@ -366,7 +366,7 @@ public class UncheckableRadioGroup extends RadioGroup {
          */
         public void onChildViewRemoved(View parent, View child) {
             if (parent == UncheckableRadioGroup.this && child instanceof UncheckableRadioButton) {
-                setOnWidgetCheckedChangeListener((UncheckableRadioButton) child, null);
+                setOnCheckedChangeWidgetListener((UncheckableRadioButton) child, null);
             }
 
             if (mOnHierarchyChangeListener != null) {
@@ -374,7 +374,7 @@ public class UncheckableRadioGroup extends RadioGroup {
             }
         }
         
-        private void setOnWidgetCheckedChangeListener(UncheckableRadioButton uncheckableRadioButton, 
+        private void setOnCheckedChangeWidgetListener(UncheckableRadioButton uncheckableRadioButton, 
                 android.widget.CompoundButton.OnCheckedChangeListener checkedChangeListener) {
             
             try {
