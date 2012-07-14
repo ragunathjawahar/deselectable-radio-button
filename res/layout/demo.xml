@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.mobsandgeeks.widget.UncheckableRadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        
+        <com.mobsandgeeks.widget.UncheckableRadioButton
+            android:id="@+id/inky"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/inky" />
+        
+        <com.mobsandgeeks.widget.UncheckableRadioButton
+            android:id="@+id/pinky"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pinky" />
+        
+        <com.mobsandgeeks.widget.UncheckableRadioButton
+            android:id="@+id/ponky"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ponky" />
+        
+    </com.mobsandgeeks.widget.UncheckableRadioGroup>
+
+</RelativeLayout>

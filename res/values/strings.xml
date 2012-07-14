@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Uncheckable Radio Button Demo</string>
+    <string name="inky">Inky</string>
+    <string name="pinky">Pinky</string>
+    <string name="ponky">Ponky</string>
+</resources>
