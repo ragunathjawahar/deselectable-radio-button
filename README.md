@@ -11,7 +11,6 @@ Compatibility
 Usage
 -----
 
-    // Layout
     ...
     <com.mobsandgeeks.widget.UncheckableRadioGroup
         android:layout_width="fill_parent"
@@ -37,7 +36,7 @@ Attribution
 -----------
 Based on the [Android Open Source Project][android-project].
 
-  [layout-link]: https://github.com/ragunathjawahar/uncheckable-radio-button/blob/master/src/com/mobsandgeeks/demo/CircularSentenceActivity.java
-  [java-source]: https://github.com/ragunathjawahar/uncheckable-radio-button/blob/master/src/com/mobsandgeeks/demo/CircularSentenceActivity.java
+  [layout-link]: https://github.com/ragunathjawahar/uncheckable-radio-button/blob/master/res/layout/demo.xml
+  [java-source]: https://github.com/ragunathjawahar/uncheckable-radio-button/blob/master/src/com/mobsandgeeks/widget/demo/DemoActivity.java
   [android-project]: http://source.android.com/
   
