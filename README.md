@@ -30,7 +30,7 @@ Also you can check the [layout][layout-link] and [Java source][java-source] for 
 
 Screenshots
 -------------------
-<img src="https://dl.dropbox.com/u/18586857/open-source/screenshots/urb-ss1.png"> &nbsp; <img src="https://dl.dropbox.com/u/18586857/open-source/screenshots/urb-ss2.png">
+<img src="https://dl.dropbox.com/u/18586857/open-source/screenshots/drb-ss1.png"> &nbsp; <img src="https://dl.dropbox.com/u/18586857/open-source/screenshots/drb-ss2.png">
 
 Attribution
 -----------

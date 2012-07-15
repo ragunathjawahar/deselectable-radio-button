@@ -30,15 +30,15 @@ import android.widget.RadioGroup;
 
 /**
  * <p>This class is used to create a multiple-exclusion scope for a set of 
- * uncheckable radio buttons. Checking one uncheckable radio button that belongs 
- * to an uncheckable radio group unchecks any previously checked uncheckable radio 
+ * deselectable radio buttons. Checking one deselectable radio button that belongs 
+ * to an deselectable radio group unchecks any previously checked deselectable radio 
  * button within the same group.</p>
  *
- * <p>Intially, all of the uncheckable radio buttons are unchecked. It is possible
- * to uncheck a particular uncheckable radio button, the uncheckable radio group 
+ * <p>Intially, all of the deselectable radio buttons are unchecked. It is possible
+ * to uncheck a particular deselectable radio button, the deselectable radio group 
  * can be cleared to remove the checked state.</p>
  *
- * <p>The selection is identified by the unique id of the uncheckable radio button 
+ * <p>The selection is identified by the unique id of the deselectable radio button 
  * as defined in the XML layout file.</p>
  *
  * <p><strong>XML Attributes</strong></p>
@@ -50,13 +50,13 @@ import android.widget.RadioGroup;
  * {@link android.widget.LinearLayout.LayoutParams LinearLayout.LayoutParams}
  * for layout attributes.</p>
  * 
- * @see UncheckableRadioButton
+ * @see DeselectableRadioButton
  *
  */
-public class UncheckableRadioGroup extends RadioGroup {
+public class DeselectableRadioGroup extends RadioGroup {
     // holds the checked id; the selection is empty by default
     private int mCheckedId = -1;
-    // tracks children uncheckable radio buttons checked state
+    // tracks children deselectable radio buttons checked state
     private CompoundButton.OnCheckedChangeListener mChildOnCheckedChangeListener;
     // when true, mOnCheckedChangeListener discards events
     private boolean mProtectFromCheckedChange = false;
@@ -66,7 +66,7 @@ public class UncheckableRadioGroup extends RadioGroup {
     /**
      * {@inheritDoc}
      */
-    public UncheckableRadioGroup(Context context) {
+    public DeselectableRadioGroup(Context context) {
         super(context);
         init();
     }
@@ -74,7 +74,7 @@ public class UncheckableRadioGroup extends RadioGroup {
     /**
      * {@inheritDoc}
      */
-    public UncheckableRadioGroup(Context context, AttributeSet attrs) {
+    public DeselectableRadioGroup(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
@@ -101,7 +101,7 @@ public class UncheckableRadioGroup extends RadioGroup {
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        // checks the appropriate uncheckable radio button as requested in the XML file
+        // checks the appropriate deselectable radio button as requested in the XML file
         if (mCheckedId != -1) {
             mProtectFromCheckedChange = true;
             setCheckedStateForView(mCheckedId, true);
@@ -112,8 +112,8 @@ public class UncheckableRadioGroup extends RadioGroup {
 
     @Override
     public void addView(View child, int index, ViewGroup.LayoutParams params) {
-        if (child instanceof UncheckableRadioButton) {
-            final UncheckableRadioButton button = (UncheckableRadioButton) child;
+        if (child instanceof DeselectableRadioButton) {
+            final DeselectableRadioButton button = (DeselectableRadioButton) child;
             if (button.isChecked()) {
                 mProtectFromCheckedChange = true;
                 if (mCheckedId != -1) {
@@ -128,11 +128,11 @@ public class UncheckableRadioGroup extends RadioGroup {
     }
 
     /**
-     * <p>Sets the selection to the uncheckable radio button whose identifier is 
+     * <p>Sets the selection to the deselectable radio button whose identifier is 
      * passed in parameter. Using -1 as the selection identifier clears the selection;
      * such an operation is equivalent to invoking {@link #clearCheck()}.</p>
      *
-     * @param id the unique id of the uncheckable radio button to select in this group
+     * @param id the unique id of the deselectable radio button to select in this group
      *
      * @see #getCheckedRadioButtonId()
      * @see #clearCheck()
@@ -163,16 +163,16 @@ public class UncheckableRadioGroup extends RadioGroup {
 
     private void setCheckedStateForView(int viewId, boolean checked) {
         View checkedView = findViewById(viewId);
-        if (checkedView != null && checkedView instanceof UncheckableRadioButton) {
-            ((UncheckableRadioButton) checkedView).setChecked(checked);
+        if (checkedView != null && checkedView instanceof DeselectableRadioButton) {
+            ((DeselectableRadioButton) checkedView).setChecked(checked);
         }
     }
 
     /**
-     * <p>Returns the identifier of the selected uncheckable radio button in this 
+     * <p>Returns the identifier of the selected deselectable radio button in this 
      * group. Upon empty selection, the returned value is -1.</p>
      *
-     * @return the unique id of the selected uncheckable radio button in this group
+     * @return the unique id of the selected deselectable radio button in this group
      *
      * @see #check(int)
      * @see #clearCheck()
@@ -182,7 +182,7 @@ public class UncheckableRadioGroup extends RadioGroup {
     }
 
     /**
-     * <p>Clears the selection. When the selection is cleared, no uncheckable radio 
+     * <p>Clears the selection. When the selection is cleared, no deselectable radio 
      * button in this group is selected and {@link #getCheckedRadioButtonId()} returns
      * null.</p>
      *
@@ -194,7 +194,7 @@ public class UncheckableRadioGroup extends RadioGroup {
     }
 
     /**
-     * <p>Register a callback to be invoked when the checked uncheckable 
+     * <p>Register a callback to be invoked when the checked deselectable 
      * radio button changes in this group.</p>
      *
      * @param listener the callback to call on checked state change
@@ -300,15 +300,15 @@ public class UncheckableRadioGroup extends RadioGroup {
 
     /**
      * <p>Interface definition for a callback to be invoked when the checked
-     * uncheckable radio button changed in this group.</p>
+     * deselectable radio button changed in this group.</p>
      */
     public interface OnCheckedChangeListener {
         /**
-         * <p>Called when the checked uncheckable radio button has changed. 
+         * <p>Called when the checked deselectable radio button has changed. 
          * When the selection is cleared, checkedId is -1.</p>
          *
-         * @param group the group in which the checked uncheckable radio button has changed
-         * @param checkedId the unique identifier of the newly checked uncheckable radio button
+         * @param group the group in which the checked deselectable radio button has changed
+         * @param checkedId the unique identifier of the newly checked deselectable radio button
          */
         public void onCheckedChanged(RadioGroup group, int checkedId);
     }
@@ -344,7 +344,7 @@ public class UncheckableRadioGroup extends RadioGroup {
          * {@inheritDoc}
          */
         public void onChildViewAdded(View parent, View child) {
-            if (parent == UncheckableRadioGroup.this && child instanceof UncheckableRadioButton) {
+            if (parent == DeselectableRadioGroup.this && child instanceof DeselectableRadioButton) {
                 int id = child.getId();
                 // generates an id if it's missing
                 if (id == View.NO_ID) {
@@ -352,7 +352,7 @@ public class UncheckableRadioGroup extends RadioGroup {
                     child.setId(id);
                 }
                 
-                setOnCheckedChangeWidgetListener(((UncheckableRadioButton) child), 
+                setOnCheckedChangeWidgetListener(((DeselectableRadioButton) child), 
                         mChildOnCheckedChangeListener);
             }
 
@@ -365,8 +365,8 @@ public class UncheckableRadioGroup extends RadioGroup {
          * {@inheritDoc}
          */
         public void onChildViewRemoved(View parent, View child) {
-            if (parent == UncheckableRadioGroup.this && child instanceof UncheckableRadioButton) {
-                setOnCheckedChangeWidgetListener((UncheckableRadioButton) child, null);
+            if (parent == DeselectableRadioGroup.this && child instanceof DeselectableRadioButton) {
+                setOnCheckedChangeWidgetListener((DeselectableRadioButton) child, null);
             }
 
             if (mOnHierarchyChangeListener != null) {
@@ -374,7 +374,7 @@ public class UncheckableRadioGroup extends RadioGroup {
             }
         }
         
-        private void setOnCheckedChangeWidgetListener(UncheckableRadioButton uncheckableRadioButton, 
+        private void setOnCheckedChangeWidgetListener(DeselectableRadioButton deselectableRadioButton, 
                 android.widget.CompoundButton.OnCheckedChangeListener checkedChangeListener) {
             
             try {
@@ -384,7 +384,7 @@ public class UncheckableRadioGroup extends RadioGroup {
                 
                 if(widgetChangeListenerMethod != null) {
                     widgetChangeListenerMethod.setAccessible(true); 
-                    widgetChangeListenerMethod.invoke(uncheckableRadioButton, checkedChangeListener);
+                    widgetChangeListenerMethod.invoke(deselectableRadioButton, checkedChangeListener);
                 }
             } catch (SecurityException e) {
                 e.printStackTrace();

@@ -23,7 +23,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Toast;
 
 import com.mobsandgeeks.widget.R;
-import com.mobsandgeeks.widget.UncheckableRadioButton;
+import com.mobsandgeeks.widget.DeselectableRadioButton;
 
 /**
 * @author Ragunath Jawahar R <rj@mobsandgeeks.com>
@@ -37,9 +37,9 @@ public class DemoActivity extends Activity implements OnCheckedChangeListener {
         setContentView(R.layout.demo);
         
         // UI References
-        UncheckableRadioButton inkyRadioButton = (UncheckableRadioButton) findViewById(R.id.inky);
-        UncheckableRadioButton pinkyRadioButton = (UncheckableRadioButton) findViewById(R.id.pinky);
-        UncheckableRadioButton ponkyRadioButton = (UncheckableRadioButton) findViewById(R.id.ponky);
+        DeselectableRadioButton inkyRadioButton = (DeselectableRadioButton) findViewById(R.id.inky);
+        DeselectableRadioButton pinkyRadioButton = (DeselectableRadioButton) findViewById(R.id.pinky);
+        DeselectableRadioButton ponkyRadioButton = (DeselectableRadioButton) findViewById(R.id.ponky);
         
         // Event listeners
         inkyRadioButton.setOnCheckedChangeListener(this);

@@ -22,17 +22,17 @@ import android.widget.CompoundButton;
 
 /**
  * <p>
- * A uncheckable radio button is a two-states button that can be either checked or
+ * A deselectable radio button is a two-states button that can be either checked or
  * unchecked. When the radio button is unchecked, the user can press or click it
  * to check it. However, contrary to a {@link android.widget.RadioButton}, an 
- * uncheckable radio button can be unchecked by the user once checked.
+ * deselectable radio button can be unchecked by the user once checked.
  * </p>
  *
  * <p>
  * Uncheckable Radio buttons are normally used together in a
- * {@link com.mobsandgeeks.widget.UncheckableRadioGroup}. When several uncheckable 
- * radio buttons live inside a uncheckable radio group, checking one 
- * uncheckable radio button unchecks all the others.</p>
+ * {@link com.mobsandgeeks.widget.DeselectableRadioGroup}. When several deselectable 
+ * radio buttons live inside a deselectable radio group, checking one 
+ * deselectable radio button unchecks all the others.</p>
  * </p>
  *
  * <p><strong>XML attributes</strong></p>
@@ -43,17 +43,17 @@ import android.widget.CompoundButton;
  * {@link android.R.styleable#View View Attributes}
  * </p>
  */
-public class UncheckableRadioButton extends CompoundButton {
+public class DeselectableRadioButton extends CompoundButton {
     
-    public UncheckableRadioButton(Context context) {
+    public DeselectableRadioButton(Context context) {
         this(context, null);
     }
     
-    public UncheckableRadioButton(Context context, AttributeSet attrs) {
+    public DeselectableRadioButton(Context context, AttributeSet attrs) {
         this(context, attrs, android.R.attr.radioButtonStyle);
     }
 
-    public UncheckableRadioButton(Context context, AttributeSet attrs, int defStyle) {
+    public DeselectableRadioButton(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 

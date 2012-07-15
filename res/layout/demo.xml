@@ -4,29 +4,29 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-    <com.mobsandgeeks.widget.UncheckableRadioGroup
+    <com.mobsandgeeks.widget.DeselectableRadioGroup
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical">
         
-        <com.mobsandgeeks.widget.UncheckableRadioButton
+        <com.mobsandgeeks.widget.DeselectableRadioButton
             android:id="@+id/inky"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/inky" />
         
-        <com.mobsandgeeks.widget.UncheckableRadioButton
+        <com.mobsandgeeks.widget.DeselectableRadioButton
             android:id="@+id/pinky"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/pinky" />
         
-        <com.mobsandgeeks.widget.UncheckableRadioButton
+        <com.mobsandgeeks.widget.DeselectableRadioButton
             android:id="@+id/ponky"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/ponky" />
         
-    </com.mobsandgeeks.widget.UncheckableRadioGroup>
+    </com.mobsandgeeks.widget.DeselectableRadioGroup>
 
 </RelativeLayout>
