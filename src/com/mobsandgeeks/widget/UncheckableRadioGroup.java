@@ -26,20 +26,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 /**
- * <p>This class is used to create a multiple-exclusion scope for a set of radio
- * buttons. Checking one radio button that belongs to a radio group unchecks
- * any previously checked radio button within the same group.</p>
+ * <p>This class is used to create a multiple-exclusion scope for a set of 
+ * uncheckable radio buttons. Checking one uncheckable radio button that belongs 
+ * to an uncheckable radio group unchecks any previously checked uncheckable radio 
+ * button within the same group.</p>
  *
- * <p>Intially, all of the radio buttons are unchecked. It is possible
- * to uncheck a particular radio button, the radio group can be cleared to
- * remove the checked state.</p>
+ * <p>Intially, all of the uncheckable radio buttons are unchecked. It is possible
+ * to uncheck a particular uncheckable radio button, the uncheckable radio group 
+ * can be cleared to remove the checked state.</p>
  *
- * <p>The selection is identified by the unique id of the radio button as defined
- * in the XML layout file.</p>
+ * <p>The selection is identified by the unique id of the uncheckable radio button 
+ * as defined in the XML layout file.</p>
  *
  * <p><strong>XML Attributes</strong></p>
  * <p>See {@link android.R.styleable#RadioGroup RadioGroup Attributes}, 
@@ -50,13 +50,13 @@ import android.widget.RadioGroup;
  * {@link android.widget.LinearLayout.LayoutParams LinearLayout.LayoutParams}
  * for layout attributes.</p>
  * 
- * @see RadioButton
+ * @see UncheckableRadioButton
  *
  */
 public class UncheckableRadioGroup extends RadioGroup {
     // holds the checked id; the selection is empty by default
     private int mCheckedId = -1;
-    // tracks children radio buttons checked state
+    // tracks children uncheckable radio buttons checked state
     private CompoundButton.OnCheckedChangeListener mChildOnCheckedChangeListener;
     // when true, mOnCheckedChangeListener discards events
     private boolean mProtectFromCheckedChange = false;
@@ -101,7 +101,7 @@ public class UncheckableRadioGroup extends RadioGroup {
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        // checks the appropriate radio button as requested in the XML file
+        // checks the appropriate uncheckable radio button as requested in the XML file
         if (mCheckedId != -1) {
             mProtectFromCheckedChange = true;
             setCheckedStateForView(mCheckedId, true);
@@ -128,11 +128,11 @@ public class UncheckableRadioGroup extends RadioGroup {
     }
 
     /**
-     * <p>Sets the selection to the radio button whose identifier is passed in
-     * parameter. Using -1 as the selection identifier clears the selection;
+     * <p>Sets the selection to the uncheckable radio button whose identifier is 
+     * passed in parameter. Using -1 as the selection identifier clears the selection;
      * such an operation is equivalent to invoking {@link #clearCheck()}.</p>
      *
-     * @param id the unique id of the radio button to select in this group
+     * @param id the unique id of the uncheckable radio button to select in this group
      *
      * @see #getCheckedRadioButtonId()
      * @see #clearCheck()
@@ -169,10 +169,10 @@ public class UncheckableRadioGroup extends RadioGroup {
     }
 
     /**
-     * <p>Returns the identifier of the selected radio button in this group.
-     * Upon empty selection, the returned value is -1.</p>
+     * <p>Returns the identifier of the selected uncheckable radio button in this 
+     * group. Upon empty selection, the returned value is -1.</p>
      *
-     * @return the unique id of the selected radio button in this group
+     * @return the unique id of the selected uncheckable radio button in this group
      *
      * @see #check(int)
      * @see #clearCheck()
@@ -182,8 +182,8 @@ public class UncheckableRadioGroup extends RadioGroup {
     }
 
     /**
-     * <p>Clears the selection. When the selection is cleared, no radio button
-     * in this group is selected and {@link #getCheckedRadioButtonId()} returns
+     * <p>Clears the selection. When the selection is cleared, no uncheckable radio 
+     * button in this group is selected and {@link #getCheckedRadioButtonId()} returns
      * null.</p>
      *
      * @see #check(int)
@@ -194,8 +194,8 @@ public class UncheckableRadioGroup extends RadioGroup {
     }
 
     /**
-     * <p>Register a callback to be invoked when the checked radio button
-     * changes in this group.</p>
+     * <p>Register a callback to be invoked when the checked uncheckable 
+     * radio button changes in this group.</p>
      *
      * @param listener the callback to call on checked state change
      */
@@ -300,15 +300,15 @@ public class UncheckableRadioGroup extends RadioGroup {
 
     /**
      * <p>Interface definition for a callback to be invoked when the checked
-     * radio button changed in this group.</p>
+     * uncheckable radio button changed in this group.</p>
      */
     public interface OnCheckedChangeListener {
         /**
-         * <p>Called when the checked radio button has changed. When the
-         * selection is cleared, checkedId is -1.</p>
+         * <p>Called when the checked uncheckable radio button has changed. 
+         * When the selection is cleared, checkedId is -1.</p>
          *
-         * @param group the group in which the checked radio button has changed
-         * @param checkedId the unique identifier of the newly checked radio button
+         * @param group the group in which the checked uncheckable radio button has changed
+         * @param checkedId the unique identifier of the newly checked uncheckable radio button
          */
         public void onCheckedChanged(RadioGroup group, int checkedId);
     }

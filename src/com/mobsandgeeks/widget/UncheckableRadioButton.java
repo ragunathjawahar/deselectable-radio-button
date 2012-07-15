@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.mobsandgeeks.widget;
 
 import android.content.Context;
@@ -21,16 +22,17 @@ import android.widget.CompoundButton;
 
 /**
  * <p>
- * A radio button is a two-states button that can be either checked or
+ * A uncheckable radio button is a two-states button that can be either checked or
  * unchecked. When the radio button is unchecked, the user can press or click it
- * to check it. However, contrary to a {@link android.widget.CheckBox}, a radio
- * button cannot be unchecked by the user once checked.
+ * to check it. However, contrary to a {@link android.widget.RadioButton}, an 
+ * uncheckable radio button can be unchecked by the user once checked.
  * </p>
  *
  * <p>
- * Radio buttons are normally used together in a
- * {@link com.mobsandgeeks.ui.RadioGroup}. When several radio buttons live inside
- * a radio group, checking one radio button unchecks all the others.</p>
+ * Uncheckable Radio buttons are normally used together in a
+ * {@link com.mobsandgeeks.widget.UncheckableRadioGroup}. When several uncheckable 
+ * radio buttons live inside a uncheckable radio group, checking one 
+ * uncheckable radio button unchecks all the others.</p>
  * </p>
  *
  * <p><strong>XML attributes</strong></p>
