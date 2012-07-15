@@ -36,7 +36,7 @@ Attribution
 -----------
 Based on the [Android Open Source Project][android-project].
 
-  [layout-link]: https://github.com/ragunathjawahar/uncheckable-radio-button/blob/master/res/layout/demo.xml
-  [java-source]: https://github.com/ragunathjawahar/uncheckable-radio-button/blob/master/src/com/mobsandgeeks/widget/demo/DemoActivity.java
+  [layout-link]: https://github.com/ragunathjawahar/deselectable-radio-button/blob/master/res/layout/demo.xml
+  [java-source]: https://github.com/ragunathjawahar/deselectable-radio-button/blob/master/src/com/mobsandgeeks/widget/demo/DemoActivity.java
   [android-project]: http://source.android.com/
   
