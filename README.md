@@ -12,19 +12,19 @@ Usage
 -----
 
     ...
-    <com.mobsandgeeks.widget.UncheckableRadioGroup
+    <com.mobsandgeeks.widget.DeselectableRadioGroup
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical">
         
-        <com.mobsandgeeks.widget.UncheckableRadioButton
+        <com.mobsandgeeks.widget.DeselectableRadioButton
             android:id="@+id/inky"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/inky" />
             
         ...
-    <com.mobsandgeeks.widget.UncheckableRadioGroup>
+    <com.mobsandgeeks.widget.DeselectableRadioGroup>
 
 Also you can check the [layout][layout-link] and [Java source][java-source] for a quick start.
 
