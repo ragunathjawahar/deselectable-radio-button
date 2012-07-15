@@ -1,7 +1,7 @@
 About
 =====
 
-Uncheckable Radio Button for Android.
+Deselectable Radio Button for Android.
 
 Compatibility
 -------------
