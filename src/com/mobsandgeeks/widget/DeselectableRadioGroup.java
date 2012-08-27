@@ -29,17 +29,16 @@ import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 
 /**
- * <p>This class is used to create a multiple-exclusion scope for a set of 
- * deselectable radio buttons. Checking one deselectable radio button that belongs 
- * to an deselectable radio group unchecks any previously checked deselectable radio 
- * button within the same group.</p>
+ * <p>This class is used to create a multiple-exclusion scope for a set of deselectable radio 
+ * buttons. Checking one deselectable radio button that belongs to an deselectable radio group 
+ * unchecks any previously checked deselectable radio button within the same group.</p>
  *
- * <p>Intially, all of the deselectable radio buttons are unchecked. It is possible
- * to uncheck a particular deselectable radio button, the deselectable radio group 
- * can be cleared to remove the checked state.</p>
+ * <p>Intially, all of the deselectable radio buttons are unchecked. It is possible to uncheck a 
+ * particular deselectable radio button, the deselectable radio group can be cleared to remove the 
+ * checked state.</p>
  *
- * <p>The selection is identified by the unique id of the deselectable radio button 
- * as defined in the XML layout file.</p>
+ * <p>The selection is identified by the unique id of the deselectable radio button as defined in 
+ * the XML layout file.</p>
  *
  * <p><strong>XML Attributes</strong></p>
  * <p>See {@link android.R.styleable#RadioGroup RadioGroup Attributes}, 
@@ -374,7 +373,8 @@ public class DeselectableRadioGroup extends RadioGroup {
             }
         }
         
-        private void setOnCheckedChangeWidgetListener(DeselectableRadioButton deselectableRadioButton, 
+        private void setOnCheckedChangeWidgetListener(
+                DeselectableRadioButton deselectableRadioButton, 
                 android.widget.CompoundButton.OnCheckedChangeListener checkedChangeListener) {
             
             try {
@@ -384,7 +384,8 @@ public class DeselectableRadioGroup extends RadioGroup {
                 
                 if(widgetChangeListenerMethod != null) {
                     widgetChangeListenerMethod.setAccessible(true); 
-                    widgetChangeListenerMethod.invoke(deselectableRadioButton, checkedChangeListener);
+                    widgetChangeListenerMethod.invoke(deselectableRadioButton, 
+                            checkedChangeListener);
                 }
             } catch (SecurityException e) {
                 e.printStackTrace();
