@@ -1,5 +1,5 @@
 About
-=====
+-----
 
 Deselectable Radio Button for Android.
 
