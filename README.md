@@ -1,3 +1,5 @@
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ragunathjawahar&url=https://github.com/ragunathjawahar/deselectable-radio-button&title=Deselectable Radio Button&language=&tags=github&category=software)
+
 About
 -----
 
